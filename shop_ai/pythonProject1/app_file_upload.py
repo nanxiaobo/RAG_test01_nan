@@ -21,8 +21,8 @@ async def upload_file(file: UploadFile):
     return {
         "filename": filename,
         "file_path": save_file,
-        "file_size": len(save_file)}
+        "file_size": len(content)}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8001)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
